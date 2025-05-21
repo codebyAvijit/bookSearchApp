@@ -1,0 +1,70 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.main-heading {
+  font-size: 60px;
+  text-align: center;
+  background-color: brown;
+  min-height: 100px;
+  margin: 0; /* ← THIS removes the top gap */
+  padding: 50px 0 0 0;
+  background-image: url("/src/assets/images/woodenbg.jpg");
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.main-div {
+  text-align: center;
+  position: relative;
+
+  background-image: url("../src/assets/images/wooden2.jpg");
+}
+
+.main-div input {
+  width: 300px;
+  height: 35px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 10px 10px 40px; /* left padding makes space for the icon */
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.input-icon {
+  position: absolute;
+  top: 39px;
+  left: 480px;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 18px;
+  pointer-events: none; /* so it doesn’t block input clicks */
+}
+
+.displayedbooks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.book-card {
+  width: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  background-color: #fdfdfd;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-card:hover {
+  transform: scale(1.2);
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
