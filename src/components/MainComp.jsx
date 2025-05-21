@@ -23,25 +23,7 @@ const MainComp = () => {
         }}
         value={query}
       />
-      <div className="displayedbooks">
-        {books
-          .filter((book) => book.volumeInfo.title.toLowerCase().includes(query))
-          .map((book) => (
-            <a
-              href={book.volumeInfo.infoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="book-card-link"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <div className="book-card" key={book.id}>
-                <img src={book.volumeInfo.imageLinks?.thumbnail} alt="cover" />
-                <h3>{book.volumeInfo.title}</h3>
-                <p>{book.volumeInfo.authors?.join(", ")}</p>
-              </div>
-            </a>
-          ))}
-      </div>
+      <div className="displayedbooks"></div>
     </div>
   );
 };
